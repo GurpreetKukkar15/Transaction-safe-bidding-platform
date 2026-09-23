@@ -1,0 +1,444 @@
+{
+  "metadata": {
+    "recorded_at": "2026-09-23T16:47:20.413859+00:00",
+    "python": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "machine": "arm64",
+    "random_seed": 20260923,
+    "postgresql": {
+      "version": "PostgreSQL 18.6 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+      "isolation": "read committed",
+      "timezone": "UTC"
+    },
+    "clock": "time.perf_counter_ns",
+    "source": {
+      "git_commit": "20978dcd55747e8f12e6efc397f083287db2e13e",
+      "git_dirty": false
+    },
+    "configuration": {
+      "strategies": [
+        "pessimistic",
+        "optimistic"
+      ],
+      "workloads": [
+        "unique_prices"
+      ],
+      "concurrency_levels": [
+        32
+      ],
+      "requests": 100000,
+      "repetitions": 10,
+      "warmup_requests": 1000,
+      "pool_min_size": 4,
+      "pool_max_size": 32,
+      "lock_timeout_ms": 2000,
+      "statement_timeout_ms": 5000,
+      "optimistic_max_attempts": 5,
+      "trial_order": "randomized",
+      "request_observations": "omitted"
+    }
+  },
+  "trials": [
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 2,
+      "wall_time_ns": 56398101542,
+      "throughput_requests_per_second": 1773.1093293189915,
+      "p50_latency_ms": 17.754167,
+      "p95_latency_ms": 18.790583,
+      "p99_latency_ms": 22.223542,
+      "outcome_counts": {
+        "accepted": 16,
+        "rejected": 99984
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 6,
+      "wall_time_ns": 59775459916,
+      "throughput_requests_per_second": 1672.9273206852092,
+      "p50_latency_ms": 18.685,
+      "p95_latency_ms": 20.858667,
+      "p99_latency_ms": 25.810125,
+      "outcome_counts": {
+        "accepted": 11,
+        "rejected": 99989
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 3,
+      "wall_time_ns": 65746313708,
+      "throughput_requests_per_second": 1520.9978226936246,
+      "p50_latency_ms": 20.371042,
+      "p95_latency_ms": 25.519042,
+      "p99_latency_ms": 31.253541,
+      "outcome_counts": {
+        "accepted": 13,
+        "rejected": 99987
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 4,
+      "wall_time_ns": 45914400958,
+      "throughput_requests_per_second": 2177.9659085931353,
+      "p50_latency_ms": 14.184917,
+      "p95_latency_ms": 21.159125,
+      "p99_latency_ms": 25.062666,
+      "outcome_counts": {
+        "accepted": 11,
+        "rejected": 99989
+      },
+      "total_optimistic_attempts": 100014,
+      "total_optimistic_conflicts": 42,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 8,
+      "wall_time_ns": 45848088250,
+      "throughput_requests_per_second": 2181.116025050401,
+      "p50_latency_ms": 14.152084,
+      "p95_latency_ms": 21.05125,
+      "p99_latency_ms": 24.792584,
+      "outcome_counts": {
+        "accepted": 14,
+        "rejected": 99986
+      },
+      "total_optimistic_attempts": 100042,
+      "total_optimistic_conflicts": 58,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 5,
+      "wall_time_ns": 47661949667,
+      "throughput_requests_per_second": 2098.109722717399,
+      "p50_latency_ms": 14.6525,
+      "p95_latency_ms": 21.931417,
+      "p99_latency_ms": 26.003292,
+      "outcome_counts": {
+        "accepted": 16,
+        "rejected": 99984
+      },
+      "total_optimistic_attempts": 100053,
+      "total_optimistic_conflicts": 82,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 5,
+      "wall_time_ns": 73309080667,
+      "throughput_requests_per_second": 1364.087492165413,
+      "p50_latency_ms": 23.280292,
+      "p95_latency_ms": 25.48925,
+      "p99_latency_ms": 29.512083,
+      "outcome_counts": {
+        "accepted": 17,
+        "rejected": 99983
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 3,
+      "wall_time_ns": 46539674125,
+      "throughput_requests_per_second": 2148.7043448437553,
+      "p50_latency_ms": 14.438125,
+      "p95_latency_ms": 21.18775,
+      "p99_latency_ms": 24.626875,
+      "outcome_counts": {
+        "accepted": 15,
+        "rejected": 99985
+      },
+      "total_optimistic_attempts": 100021,
+      "total_optimistic_conflicts": 59,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 9,
+      "wall_time_ns": 85637885250,
+      "throughput_requests_per_second": 1167.7074896008132,
+      "p50_latency_ms": 26.534625,
+      "p95_latency_ms": 31.749084,
+      "p99_latency_ms": 40.183916,
+      "outcome_counts": {
+        "accepted": 11,
+        "rejected": 99989
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 7,
+      "wall_time_ns": 51860736791,
+      "throughput_requests_per_second": 1928.2410198490309,
+      "p50_latency_ms": 16.033458,
+      "p95_latency_ms": 23.781416,
+      "p99_latency_ms": 27.901417,
+      "outcome_counts": {
+        "accepted": 12,
+        "rejected": 99988
+      },
+      "total_optimistic_attempts": 100029,
+      "total_optimistic_conflicts": 54,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 1,
+      "wall_time_ns": 52270171708,
+      "throughput_requests_per_second": 1913.1370097392448,
+      "p50_latency_ms": 16.147292,
+      "p95_latency_ms": 24.058625,
+      "p99_latency_ms": 28.206458,
+      "outcome_counts": {
+        "accepted": 18,
+        "rejected": 99982
+      },
+      "total_optimistic_attempts": 100062,
+      "total_optimistic_conflicts": 55,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 1,
+      "wall_time_ns": 86138185334,
+      "throughput_requests_per_second": 1160.925315668666,
+      "p50_latency_ms": 26.942458,
+      "p95_latency_ms": 29.713792,
+      "p99_latency_ms": 36.430458,
+      "outcome_counts": {
+        "accepted": 18,
+        "rejected": 99982
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 4,
+      "wall_time_ns": 88008301834,
+      "throughput_requests_per_second": 1136.2564430412324,
+      "p50_latency_ms": 27.413459,
+      "p95_latency_ms": 30.97025,
+      "p99_latency_ms": 37.585042,
+      "outcome_counts": {
+        "accepted": 13,
+        "rejected": 99987
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 6,
+      "wall_time_ns": 54372652250,
+      "throughput_requests_per_second": 1839.159869196927,
+      "p50_latency_ms": 16.740958,
+      "p95_latency_ms": 24.973542,
+      "p99_latency_ms": 29.27875,
+      "outcome_counts": {
+        "accepted": 12,
+        "rejected": 99988
+      },
+      "total_optimistic_attempts": 100032,
+      "total_optimistic_conflicts": 48,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 7,
+      "wall_time_ns": 93073187000,
+      "throughput_requests_per_second": 1074.4232922850272,
+      "p50_latency_ms": 28.431042,
+      "p95_latency_ms": 36.119042,
+      "p99_latency_ms": 45.42725,
+      "outcome_counts": {
+        "accepted": 9,
+        "rejected": 99991
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 9,
+      "wall_time_ns": 56833574333,
+      "throughput_requests_per_second": 1759.5233305946715,
+      "p50_latency_ms": 17.568084,
+      "p95_latency_ms": 26.370542,
+      "p99_latency_ms": 30.970791,
+      "outcome_counts": {
+        "accepted": 10,
+        "rejected": 99990
+      },
+      "total_optimistic_attempts": 100025,
+      "total_optimistic_conflicts": 49,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 10,
+      "wall_time_ns": 54600442959,
+      "throughput_requests_per_second": 1831.4869730102916,
+      "p50_latency_ms": 16.853458,
+      "p95_latency_ms": 25.181125,
+      "p99_latency_ms": 29.682958,
+      "outcome_counts": {
+        "accepted": 15,
+        "rejected": 99985
+      },
+      "total_optimistic_attempts": 100054,
+      "total_optimistic_conflicts": 72,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 10,
+      "wall_time_ns": 88891484333,
+      "throughput_requests_per_second": 1124.9671523695783,
+      "p50_latency_ms": 27.643833,
+      "p95_latency_ms": 31.293,
+      "p99_latency_ms": 36.829334,
+      "outcome_counts": {
+        "accepted": 16,
+        "rejected": 99984
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "pessimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 8,
+      "wall_time_ns": 91183262708,
+      "throughput_requests_per_second": 1096.692496299833,
+      "p50_latency_ms": 28.4325,
+      "p95_latency_ms": 31.691875,
+      "p99_latency_ms": 38.507542,
+      "outcome_counts": {
+        "accepted": 9,
+        "rejected": 99991
+      },
+      "total_optimistic_attempts": 100000,
+      "total_optimistic_conflicts": 0,
+      "invariant_valid": true,
+      "invariant_violations": []
+    },
+    {
+      "strategy": "optimistic",
+      "workload": "unique_prices",
+      "concurrency": 32,
+      "request_count": 100000,
+      "repetition": 2,
+      "wall_time_ns": 55746843584,
+      "throughput_requests_per_second": 1793.823534588444,
+      "p50_latency_ms": 17.242916,
+      "p95_latency_ms": 25.817917,
+      "p99_latency_ms": 30.489667,
+      "outcome_counts": {
+        "accepted": 14,
+        "rejected": 99986
+      },
+      "total_optimistic_attempts": 100030,
+      "total_optimistic_conflicts": 47,
+      "invariant_valid": true,
+      "invariant_violations": []
+    }
+  ]
+}
