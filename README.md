@@ -8,7 +8,6 @@ throughput, tail latency, and optimistic conflicts.
 
 Implementation status: complete and locally verified on 2026-09-22.
 
-## Why this is not an API wrapper
 
 FastAPI and Psycopg provide transport and database connectivity. This
 repository implements and tests the engineering work being evaluated:
